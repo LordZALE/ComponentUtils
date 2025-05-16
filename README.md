@@ -8,10 +8,13 @@
 ## Overview
 
 ### RequireComponentGetters
-Create getters for each RequireComponent type on a MonoBehaviour. The MonoBehaviour class must be marked with `partial`.
+Create getters for each RequireComponent type on a MonoBehaviour. Each getter will lazily cache component references.
 
-Each getter will lazily cache component references.
+The MonoBehaviour class must be marked with `partial`.
 ```csharp
+using ComponentUtils;
+using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponentGetters]
 public partial class MyBehaviour : MonoBehaviour
@@ -23,6 +26,9 @@ public partial class MyBehaviour : MonoBehaviour
 ```
 Getter visibility can also be specified (as a literal string):
 ```csharp
+using ComponentUtils;
+using UnityEngine;
+
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponentGetters("protected internal")]
 public partial class MyBehaviour : MonoBehaviour
