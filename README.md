@@ -3,7 +3,8 @@
 # Overview
 
 ### RequireComponentGetters
-Create getters for each RequireComponent on the MonoBehaviour.
+Create getters for each RequireComponent type on a MonoBehaviour. The MonoBehaviour class must be marked with `partial`.
+
 Each getter will lazily cache component references.
 ```csharp
 [RequireComponent(typeof(Rigidbody))]
