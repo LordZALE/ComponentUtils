@@ -1,6 +1,11 @@
 # Unity Component Utils
 
-# Overview
+## Installation
+1. Open the Unity package manage from `Window -> Package Manager`
+2. Click `+` and select `Install package from git URL...`
+3. Enter `https://github.com/LordZALE/ComponentUtils.git` and click `Install`
+
+## Overview
 
 ### RequireComponentGetters
 Create getters for each RequireComponent type on a MonoBehaviour. The MonoBehaviour class must be marked with `partial`.
